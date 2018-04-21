@@ -1,5 +1,5 @@
-# DM_assignment1
-The first assignment of course data mining.
+# DM_assignment2
+The second assignment of course data mining.
 
 Student_ID: 2120171064.
 
