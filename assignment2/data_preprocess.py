@@ -21,7 +21,10 @@ def preprocess():
             for i in attr:
                 at = row[i]
                 if at in NA:
-                    at = '%s NA'%name[i]
+                    at = '(%s) NA'%(name[i])
+                else:
+                    at = '(%s) %s'%(name[i],row[i])
+                
                 item.append(at)
 
             event.append(item)
