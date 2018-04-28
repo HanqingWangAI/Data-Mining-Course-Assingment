@@ -120,22 +120,22 @@ SVM(Support Vector Machine)分类器是一个经典有效的有监督分类模�
 为了分析各个属性值对分类结果的影响，我们对每一个属性的分类结果分别绘制了直方图。由于我们不知道测试数据中的标签的真实值，因而我还绘制了训练数据中的直方图与测试数据结果进行对比，看两个数据的预测分布是否相似。
 
 #### Gaussian Naive Bayes 分类结果
-<img src="Figures/gnb_Pclass_hist.png" width="500px">
-<img src="Figures/gnb_Age_hist.png" width="500px">
-<img src="Figures/gnb_Sex_hist.png" width="500px">
-<img src="Figures/gnb_SibSp_hist.png" width="500px">
-<img src="Figures/gnb_Embarked_hist.png" width="500px">
-<img src="Figures/gnb_Fare_hist.png" width="500px">
-<img src="Figures/gnb_Parch_hist.png" width="500px">
+<img src="Figures/gnb_Pclass_hist.png" width="700px">
+<img src="Figures/gnb_Age_hist.png" width="700px">
+<img src="Figures/gnb_Sex_hist.png" width="700px">
+<img src="Figures/gnb_SibSp_hist.png" width="700px">
+<img src="Figures/gnb_Embarked_hist.png" width="700px">
+<img src="Figures/gnb_Fare_hist.png" width="700px">
+<img src="Figures/gnb_Parch_hist.png" width="700px">
 
 #### SVM 分类结果
-<img src="Figures/svm_Pclass_hist.png" width="500px">
-<img src="Figures/svm_Age_hist.png" width="500px">
-<img src="Figures/svm_Sex_hist.png" width="500px">
-<img src="Figures/svm_SibSp_hist.png" width="500px">
-<img src="Figures/svm_Embarked_hist.png" width="500px">
-<img src="Figures/svm_Fare_hist.png" width="500px">
-<img src="Figures/svm_Parch_hist.png" width="500px">
+<img src="Figures/svm_Pclass_hist.png" width="700px">
+<img src="Figures/svm_Age_hist.png" width="700px">
+<img src="Figures/svm_Sex_hist.png" width="700px">
+<img src="Figures/svm_SibSp_hist.png" width="700px">
+<img src="Figures/svm_Embarked_hist.png" width="700px">
+<img src="Figures/svm_Fare_hist.png" width="700px">
+<img src="Figures/svm_Parch_hist.png" width="700px">
 
 #### 结果分析
 
