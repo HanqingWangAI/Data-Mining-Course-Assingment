@@ -15,7 +15,7 @@
 1. [数据说明](#数据说明)
 2. [数据预处理](#数据预处理)
 3. [分类模型挖掘](#分类模型挖掘)
-    - [Gaussian Naive Bayes](#Gaussian Naive Bayes)
+    - [Gaussian Naive Bayes](#GaussianNaiveBayes)
     - [SVM](#SVM)
     - [分类结果分析](#分类结果分析)
 4. [聚类模型挖掘](#聚类模型挖掘)
