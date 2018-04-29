@@ -113,7 +113,7 @@
 
 ### SVM
 
-SVM(Support Vector Machine)分类器是一个经典有效的有监督分类模型，采用核方法后的SVM具有更好的分类能力。算法的详细介绍可见[https://en.wikipedia.org/wiki/Support_vector_machine](#https://en.wikipedia.org/wiki/Support_vector_machine)。这里使用sklearn的svm模块训练了一个高斯核的支持向量机。
+SVM(Support Vector Machine)分类器是一个经典有效的有监督分类模型，采用核方法后的SVM具有更好的分类能力。算法的详细介绍可见[https://en.wikipedia.org/wiki/Support_vector_machine](https://en.wikipedia.org/wiki/Support_vector_machine)。这里使用sklearn的svm模块训练了一个高斯核的支持向量机。
 
 ### 分类结果可视化与分析
 
@@ -170,13 +170,13 @@ GMM是Gaussian Mixture Model的缩写，是一种混合模型。它是一种基�
 在这里我们采用PCA提取特征的主成分来对聚类结果进行可视化。并和分类的结果进行对比。可视化如下所示。
 <table>
 <tr>
-<th><img src="Figures/GMM_scatter.png" width="350px"></th>
-<th><img src="Figures/Kmeans_scatter.png" width="350px"></th>
+<th><img src="Figures/GMM_scatter.png" width="450px"></th>
+<th><img src="Figures/Kmeans_scatter.png" width="450px"></th>
 </tr>
 </table>
 <table>
 <tr>
-<th><img src="Figures/GNB_scatter.png" width="350px"></th>
-<th><img src="Figures/SVM_scatter.png" width="350px"></th>
+<th><img src="Figures/GNB_scatter.png" width="450px"></th>
+<th><img src="Figures/SVM_scatter.png" width="450px"></th>
 </tr>
 </table>
