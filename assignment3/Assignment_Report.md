@@ -168,6 +168,27 @@ GMM是Gaussian Mixture Model的缩写，是一种混合模型。它是一种基�
 ### 聚类结果可视化及分析
 
 在这里我们采用PCA提取特征的主成分来对聚类结果进行可视化。并和分类的结果进行对比。可视化如下所示。
+
+#### K-means 聚类结果
+<img src="Figures/kmeans_Pclass_hist.png" width="700px">
+<img src="Figures/kmeans_Age_hist.png" width="700px">
+<img src="Figures/kmeans_Sex_hist.png" width="700px">
+<img src="Figures/kmeans_SibSp_hist.png" width="700px">
+<img src="Figures/kmeans_Embarked_hist.png" width="700px">
+<img src="Figures/kmeans_Fare_hist.png" width="700px">
+<img src="Figures/kmeans_Parch_hist.png" width="700px">
+
+#### GMM 聚类结果
+<img src="Figures/gmm_Pclass_hist.png" width="700px">
+<img src="Figures/gmm_Age_hist.png" width="700px">
+<img src="Figures/gmm_Sex_hist.png" width="700px">
+<img src="Figures/gmm_SibSp_hist.png" width="700px">
+<img src="Figures/gmm_Embarked_hist.png" width="700px">
+<img src="Figures/gmm_Fare_hist.png" width="700px">
+<img src="Figures/gmm_Parch_hist.png" width="700px">
+
+#### 低维可视化
+
 <table>
 <tr>
 <th><img src="Figures/GMM_scatter.png" width="450px"></th>
@@ -184,3 +205,7 @@ GMM是Gaussian Mixture Model的缩写，是一种混合模型。它是一种基�
 #### 结果分析
 
 由于PCA高维属性在主成分方向的投影，它只倾向于将数据打散，而不含任何的监督信息。在一定程度上用来降维可视化有监督分类和无监督聚类是公平的。 
+
+从图中可以看出，在二维主成分空间中，不论是对聚类结果还是分类结果，两个类都无法进行很好的区分。但是GMM聚类的结果比Kmeans的结果要好一些，Kmeans聚得的第二个类数量很少。
+
+将上面的聚类结果和下面的分类结果进行对比，可以发现聚类结果和分类结果还是有所区别的。从单个维度上分析，可以看出GMM聚类倾向于将样本点从Pclass属性上分开，而KMeans聚类效果不佳。
