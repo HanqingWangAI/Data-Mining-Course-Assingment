@@ -7,6 +7,10 @@
 - matplotlib
 - sklearn
 - [MICE](https://github.com/qweas120/MICE)
+
+## 项目代码
+源程序见 [Solution.py](Solution.py)
+
 ## 目录
 1. [数据说明](#数据说明)
 2. [数据可视化和摘要](#数据可视化和摘要)
