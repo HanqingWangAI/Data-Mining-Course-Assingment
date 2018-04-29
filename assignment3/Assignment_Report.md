@@ -108,12 +108,12 @@
 
 ### Gaussian Naive Bayes
 
-高斯朴素贝叶斯(Gaussian Naive Bayes)分类器是采用高斯模型对似然进行建模的朴素贝叶斯方法。有关算法的详细介绍可见[https://en.wikipedia.org/wiki/Naive_Bayes_classifier#Gaussian_naive_Bayes](https://en.wikipedia.org/wiki/Naive_Bayes_classifier#Gaussian_naive_Bayes)。这里使用sklearn.naive_bayes的GaussianNB模块实现。
+高斯朴素贝叶斯(Gaussian Naive Bayes)分类器是采用高斯模型对似然进行建模的朴素贝叶斯方法。有关算法的详细介绍可见[https://en.wikipedia.org/wiki/Naive_Bayes_classifier#Gaussian_naive_Bayes](https://en.wikipedia.org/wiki/Naive_Bayes_classifier#Gaussian_naive_Bayes)。这里使用`sklearn.naive_bayes`的`GaussianNB`模块实现。
 
 
 ### SVM
 
-SVM(Support Vector Machine)分类器是一个经典有效的有监督分类模型，采用核方法后的SVM具有更好的分类能力。算法的详细介绍可见[https://en.wikipedia.org/wiki/Support_vector_machine](https://en.wikipedia.org/wiki/Support_vector_machine)。这里使用sklearn的svm模块训练了一个高斯核的支持向量机。
+SVM(Support Vector Machine)分类器是一个经典有效的有监督分类模型，采用核方法后的SVM具有更好的分类能力。算法的详细介绍可见[https://en.wikipedia.org/wiki/Support_vector_machine](https://en.wikipedia.org/wiki/Support_vector_machine)。这里使用`sklearn`的`svm`模块训练了一个高斯核的支持向量机。
 
 ### 分类结果可视化与分析
 
@@ -158,11 +158,10 @@ SVM(Support Vector Machine)分类器是一个经典有效的有监督分类模�
 在聚类模型挖掘这一部分，我采用了两种不同的无监督的分类算法进行分类。一种是K-Means算法，第二种是GMM混合高斯模型。我们的聚类任务是将筛选出的7个属性作为特征进行输入，对其进行无监督聚类。接下来我将先简单介绍所用的聚类算法，并对聚类结果进行可视化和分析。
 
 ### KMeans
-K-means算法是一种经典的聚类算法，通过不断迭代更新类中心点直到达到终止条件为止，距离聚类中心近的样本点被分为该类。有关算法的详细介绍参见[https://en.wikipedia.org/wiki/K-means_clustering](https://en.wikipedia.org/wiki/K-means_clustering)
-
+K-means算法是一种经典的聚类算法，通过不断迭代更新类中心点直到达到终止条件为止，距离聚类中心近的样本点被分为该类。有关算法的详细介绍参见[https://en.wikipedia.org/wiki/K-means_clustering](https://en.wikipedia.org/wiki/K-means_clustering)。这里使用`sklearn.cluster`的`KMeans`模块来实现Kmeans聚类。
 
 ### GMM
-GMM是Gaussian Mixture Model的缩写，是一种混合模型。它是一种基于模型的聚类方法，会对每一个类建立分布模型从而估计样本点属于该类的概率。有关算法的详细介绍参见[https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model](https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model)
+GMM是Gaussian Mixture Model的缩写，是一种混合模型。它是一种基于模型的聚类方法，会对每一个类建立分布模型从而估计样本点属于该类的概率。有关算法的详细介绍参见[https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model](https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model)。这里使用`sklearn.mixture`的`GMM`模块来实现GMM聚类。
 
 
 ### 聚类结果可视化及分析
