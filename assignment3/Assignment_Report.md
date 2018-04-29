@@ -21,7 +21,7 @@
 4. [聚类模型挖掘](#聚类模型挖掘)
     - [KMeans](#KMeans)
     - [GMM](#GMM)
-    - [聚类结果分析](#聚类结果分析)
+    - [聚类结果可视化及分析](#聚类结果可视化及分析)
 
 
 
@@ -150,12 +150,33 @@ SVM(Support Vector Machine)分类器是一个经典有效的有监督分类模�
 6. **Embarked**. Embarked属性表示船员登船的位置。Titanic沿途经过了三个登船点。其中从Cherbourg登船的乘客存活率最高，从Southampton登船的存活率最低。
 7. **Fare**. Fare属性表示船员购买船票的价格。显然，船员的生存率随着传票价格的增长而大大提高。可以结合**Pclass**属性看出，在这次海难中遇难的大多数都是比较贫穷的人。
 
+接下来我们分析分类模型的预测结果。由于缺乏测试数据集的标签，我们判断分类器在测试集上分类效果的好坏是基于测试集和训练集同分布的假设的。基于这样的假设，如果预测结果的标签和训练数据的标签分布接近，则说明效果较好，如果差异较大，则说明效果不好。从图中的结果来看，两个模型的预测效果略有差别，尤其是在性别(Sex)维度上，相较来说，Gaussian Naive Bayes预测结果更符合原始分布规律，分类效果更好。
+
+
 ## 聚类模型挖掘
 
+在聚类模型挖掘这一部分，我采用了两种不同的无监督的分类算法进行分类。一种是K-Means算法，第二种是GMM混合高斯模型。我们的聚类任务是将筛选出的7个属性作为特征进行输入，对其进行无监督聚类。接下来我将先简单介绍所用的聚类算法，并对聚类结果进行可视化和分析。
+
 ### KMeans
+K-means算法是一种经典的聚类算法，通过不断迭代更新类中心点直到达到终止条件为止，距离聚类中心近的样本点被分为该类。有关算法的详细介绍参见[https://en.wikipedia.org/wiki/K-means_clustering](https://en.wikipedia.org/wiki/K-means_clustering)
+
 
 ### GMM
+GMM是Gaussian Mixture Model的缩写，是一种混合模型。它是一种基于模型的聚类方法，会对每一个类建立分布模型从而估计样本点属于该类的概率。有关算法的详细介绍参见[https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model](https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model)
 
 
+### 聚类结果可视化及分析
 
-### 聚类结果分析
+在这里我们采用PCA提取特征的主成分来对聚类结果进行可视化。并和分类的结果进行对比。可视化如下所示。
+<table>
+<tr>
+<th><img src="Figures/GMM_scatter.png" width="350px"></th>
+<th><img src="Figures/Kmeans_scatter.png" width="350px"></th>
+</tr>
+</table>
+<table>
+<tr>
+<th><img src="Figures/GNB_scatter.png" width="350px"></th>
+<th><img src="Figures/SVM_scatter.png" width="350px"></th>
+</tr>
+</table>

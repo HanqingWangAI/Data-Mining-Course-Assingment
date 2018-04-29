@@ -233,7 +233,7 @@ def main():
     plot_pca_result(low_d_test,label_gmm,'GMM')
     plot_pca_result(low_d_test,label_kmeans,'Kmeans')
     plot_pca_result(low_d_test,label_svm,'SVM',legends=['Death','Survival'])
-    plot_pca_result(low_d_test,label_svm,'GNB',legends=['Death','Survival'])
+    plot_pca_result(low_d_test,label_gnb,'GNB',legends=['Death','Survival'])
 
     
 
