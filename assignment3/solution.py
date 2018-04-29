@@ -104,7 +104,7 @@ def cluster_gmm():
 
     return cluster.predict(test_data)
 
-def plot_classificaton_result(test_label,classifier=''): 
+def plot_classificaton_result(test_label,classifier='',cls=True): 
     pred = []
     labelled = []
     pred.append([])
@@ -130,13 +130,18 @@ def plot_classificaton_result(test_label,classifier=''):
         fig,axes = plt.subplots(ncols=2)
         fig.set_size_inches(8,5)
         ax0,ax1 = axes.flatten()
-        ax0.hist([pred[0][i],pred[1][i]],bins=bin_num[i],label=['Death','Survival'])
-        ax0.set_title('Predicted Survival over %s'%attr_name[i])
+        if cls:
+            ax0.hist([pred[0][i],pred[1][i]],bins=bin_num[i],label=['Death','Survival'])
+            ax0.set_title('Predicted Survival over %s'%attr_name[i])
+        else:
+            ax0.hist([pred[0][i],pred[1][i]],bins=bin_num[i],label=['First Class','Second Class'])
+            ax0.set_title('Clustered Class over %s'%attr_name[i])
+            ax0.legend()
         
+
         ax1.hist([labelled[0][i],labelled[1][i]],bins=bin_num[i],label=['Death','Survival'])
         ax1.set_title('Labelled Survival over %s'%attr_name[i])
-        
-        plt.legend()
+        ax1.legend()
 
 
         # plt.show()
@@ -224,14 +229,14 @@ def main():
     # plot_classificaton_result(label_gnb,'gnb')
     # plot_classificaton_result(label_svm,'svm')
 
-    # plot_classificaton_result(label_gmm,'gmm')
-    plot_classificaton_result(label_kmeans,'kmeans')
+    plot_classificaton_result(label_gmm,'gmm',False)
+    plot_classificaton_result(label_kmeans,'kmeans',False)
 
     pca = PCA(2)
     low_d_test = pca.fit_transform(test_data)
     
     # plot_pca_result(low_d_test,label_gmm,'GMM')
-    plot_pca_result(low_d_test,label_kmeans,'Kmeans')
+    # plot_pca_result(low_d_test,label_kmeans,'Kmeans')
     # plot_pca_result(low_d_test,label_svm,'SVM',legends=['Death','Survival'])
     # plot_pca_result(low_d_test,label_gnb,'GNB',legends=['Death','Survival'])
 
