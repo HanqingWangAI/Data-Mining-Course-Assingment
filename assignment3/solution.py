@@ -225,15 +225,15 @@ def main():
     # plot_classificaton_result(label_svm,'svm')
 
     # plot_classificaton_result(label_gmm,'gmm')
-    # plot_classificaton_result(label_kmeans,'kmeans')
+    plot_classificaton_result(label_kmeans,'kmeans')
 
     pca = PCA(2)
     low_d_test = pca.fit_transform(test_data)
     
-    plot_pca_result(low_d_test,label_gmm,'GMM')
+    # plot_pca_result(low_d_test,label_gmm,'GMM')
     plot_pca_result(low_d_test,label_kmeans,'Kmeans')
-    plot_pca_result(low_d_test,label_svm,'SVM',legends=['Death','Survival'])
-    plot_pca_result(low_d_test,label_gnb,'GNB',legends=['Death','Survival'])
+    # plot_pca_result(low_d_test,label_svm,'SVM',legends=['Death','Survival'])
+    # plot_pca_result(low_d_test,label_gnb,'GNB',legends=['Death','Survival'])
 
     
 

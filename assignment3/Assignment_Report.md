@@ -180,3 +180,7 @@ GMM是Gaussian Mixture Model的缩写，是一种混合模型。它是一种基�
 <th><img src="Figures/SVM_scatter.png" width="450px"></th>
 </tr>
 </table>
+
+#### 结果分析
+
+由于PCA高维属性在主成分方向的投影，它只倾向于将数据打散，而不含任何的监督信息。在一定程度上用来降维可视化有监督分类和无监督聚类是公平的。 
